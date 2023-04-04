@@ -1,0 +1,16 @@
+#UC5
+delete from address_book where firstName = 'Radha';
+
+
+mysql> select * from address_book;
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+
+| firstName | lastName | address    | city       | state     | email                  | zip    | phoneNumber |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+
+| Abhishek  | Kumar    | Karolbag   | New Delhi  | New Delhi | abhi123@gmail.com      | 110099 |   991199887 |
+| Aditya    | Rai      | Sigra      | Varanasi   | UP        | aditya123@gmail.com    | 221010 |   941550505 |
+| Gaurav    | Kumar    | Gaur       | Varanasi   | UP        | gaurav459433@gmail.com | 221307 |   991145943 |
+| Rahul     | Sharma   | Shiv Nagar | Prayagraj  | HP        | rahul123@gmail.com     | 232020 |   947373377 |
+| Sita      | Devi     | Rampur     | Ayodhya    | UP        | sitadevi123@gmail.com  | 252525 |   917070707 |
+| Vandana   | Seth     | Jagdishpur | Jagdishpur | MP        | vandana123@gmail.com   | 313030 |   913122332 |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+
+6 rows in set (0.00 sec)
