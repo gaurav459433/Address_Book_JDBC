@@ -1,0 +1,19 @@
+/* Address Book Service Database */
+
+#UC1
+create database address_book_service;
+show databases;
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| address_book_service |
+| bridgelabz           |
+| employeedata         |
+| information_schema   |
+| mysql                |
+| payroll_service      |
+| performance_schema   |
+| sys                  |
++----------------------+
