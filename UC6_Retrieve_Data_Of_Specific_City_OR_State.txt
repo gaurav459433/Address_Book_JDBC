@@ -1,0 +1,20 @@
+#UC6
+
+mysql> select * from address_book where city = 'Varanasi';
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+| firstName | lastName | address | city     | state | email                  | zip    | phoneNumber |
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+| Aditya    | Rai      | Sigra   | Varanasi | UP    | aditya123@gmail.com    | 221010 |   941550505 |
+| Gaurav    | Kumar    | Gaur    | Varanasi | UP    | gaurav459433@gmail.com | 221307 |   991145943 |
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from address_book where state = 'UP';
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+| firstName | lastName | address | city     | state | email                  | zip    | phoneNumber |
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+| Aditya    | Rai      | Sigra   | Varanasi | UP    | aditya123@gmail.com    | 221010 |   941550505 |
+| Gaurav    | Kumar    | Gaur    | Varanasi | UP    | gaurav459433@gmail.com | 221307 |   991145943 |
+| Sita      | Devi     | Rampur  | Ayodhya  | UP    | sitadevi123@gmail.com  | 252525 |   917070707 |
++-----------+----------+---------+----------+-------+------------------------+--------+-------------+
+3 rows in set (0.00 sec)
