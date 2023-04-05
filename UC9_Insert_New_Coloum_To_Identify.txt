@@ -1,0 +1,48 @@
+#UC9
+
+alter table address_book ADD COLUMN relativeName VARCHAR(50);
+alter table address_book ADD COLUMN Relation VARCHAR(50);
+
+mysql> describe address_book;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| firstName    | varchar(50) | NO   | PRI | NULL    |       |
+| lastName     | varchar(50) | NO   |     | NULL    |       |
+| address      | varchar(50) | YES  |     | NULL    |       |
+| city         | varchar(50) | YES  |     | NULL    |       |
+| state        | varchar(50) | YES  |     | NULL    |       |
+| email        | varchar(50) | YES  |     | NULL    |       |
+| zip          | int         | YES  |     | NULL    |       |
+| phoneNumber  | int         | YES  |     | NULL    |       |
+| relativeName | varchar(50) | YES  |     | NULL    |       |
+| Relation     | varchar(50) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+10 rows in set (0.02 sec)
+
+update address_book set RelativeName = 'Pratik' where firstName = 'Gaurav';
+update address_book set RelativeName = 'Seema' where firstName = 'Abhishek';
+update address_book set RelativeName = 'Anil' where firstName = 'Aditya';
+update address_book set RelativeName = 'Manoj' where firstName = 'Rahul';
+update address_book set RelativeName = 'Shudha' where firstName = 'Sita';
+update address_book set RelativeName = 'Arpita' where firstName = 'Vandana';
+
+update address_book set Relation = 'Friend' where FirstName = 'Gaurav';
+update address_book set Relation = 'Aunty' where firstName = 'Abhishek';
+update address_book set Relation = 'Uncle' where firstName = 'Aditya';
+update address_book set Relation = 'Brother' where firstName = 'Rahul';
+update address_book set Relation = 'Sister' where firstName = 'Sita';
+update address_book set Relation = 'Office Colleague' where firstName = 'Vandana';
+
+mysql> select * from address_book;
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+--------------+------------------+
+| firstName | lastName | address    | city       | state     | email                  | zip    | phoneNumber | relativeName | Relation         |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+--------------+------------------+
+| Abhishek  | Kumar    | Karolbag   | New Delhi  | New Delhi | abhi123@gmail.com      | 110099 |   991199887 | Seema        | Aunty            |
+| Aditya    | Rai      | Sigra      | Varanasi   | UP        | aditya123@gmail.com    | 221010 |   941550505 | Anil         | Uncle            |
+| Gaurav    | Kumar    | Gaur       | Varanasi   | UP        | gaurav459433@gmail.com | 221307 |   991145943 | Pratik       | Friend           |
+| Rahul     | Sharma   | Shiv Nagar | Prayagraj  | HP        | rahul123@gmail.com     | 232020 |   947373377 | Manoj        | Brother          |
+| Sita      | Devi     | Rampur     | Ayodhya    | UP        | sitadevi123@gmail.com  | 252525 |   917070707 | Shudha       | Sister           |
+| Vandana   | Seth     | Jagdishpur | Jagdishpur | MP        | vandana123@gmail.com   | 313030 |   913122332 | Arpita       | Office Colleague |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+--------------+------------------+
+6 rows in set (0.01 sec)
