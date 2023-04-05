@@ -1,0 +1,45 @@
+#UC12
+
+mysql> select * from address_book where Relation = 'Family';
++-----------+----------+----------+-----------+-----------+-----------------------+--------+-------------+----------+
+| firstName | lastName | address  | city      | state     | email                 | zip    | phoneNumber | Relation |
++-----------+----------+----------+-----------+-----------+-----------------------+--------+-------------+----------+
+| Abhishek  | Kumar    | Karolbag | New Delhi | New Delhi | abhi123@gmail.com     | 110099 |   991199887 | Family   |
+| Aditya    | Rai      | Sigra    | Varanasi  | UP        | aditya123@gmail.com   | 221010 |   941550505 | Family   |
+| Puspa     | Rai      | Rampur   | Varanasi  | UP        | puspa123@gmail.com    | 221144 |   898822334 | Family   |
+| Sita      | Devi     | Rampur   | Ayodhya   | UP        | sitadevi123@gmail.com | 252525 |   917070707 | Family   |
++-----------+----------+----------+-----------+-----------+-----------------------+--------+-------------+----------+
+4 rows in set (0.01 sec)
+
+mysql> select * from address_book where Relation = 'Friend';
++-----------+----------+----------+----------+-------+------------------------+--------+-------------+----------+
+| firstName | lastName | address  | city     | state | email                  | zip    | phoneNumber | Relation |
++-----------+----------+----------+----------+-------+------------------------+--------+-------------+----------+
+| Gaurav    | Kumar    | Gaur     | Varanasi | UP    | gaurav459433@gmail.com | 221307 |   991145943 | Friend   |
+| Pratik    | Seth     | Varanasi | Varanasi | UP    | pratik123@gmail.com    | 221307 |   707903310 | Friend   |
++-----------+----------+----------+----------+-------+------------------------+--------+-------------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from address_book where Relation = 'Office Colleague';
++-----------+----------+------------+------------+-------+----------------------+--------+-------------+------------------+
+| firstName | lastName | address    | city       | state | email                | zip    | phoneNumber | Relation         |
++-----------+----------+------------+------------+-------+----------------------+--------+-------------+------------------+
+| Rahul     | Sharma   | Shiv Nagar | Prayagraj  | HP    | rahul123@gmail.com   | 232020 |   947373377 | Office Colleague |
+| Vandana   | Seth     | Jagdishpur | Jagdishpur | MP    | vandana123@gmail.com | 313030 |   913122332 | Office Colleague |
++-----------+----------+------------+------------+-------+----------------------+--------+-------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from address_book;
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+------------------+
+| firstName | lastName | address    | city       | state     | email                  | zip    | phoneNumber | Relation         |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+------------------+
+| Abhishek  | Kumar    | Karolbag   | New Delhi  | New Delhi | abhi123@gmail.com      | 110099 |   991199887 | Family           |
+| Aditya    | Rai      | Sigra      | Varanasi   | UP        | aditya123@gmail.com    | 221010 |   941550505 | Family           |
+| Gaurav    | Kumar    | Gaur       | Varanasi   | UP        | gaurav459433@gmail.com | 221307 |   991145943 | Friend           |
+| Pratik    | Seth     | Varanasi   | Varanasi   | UP        | pratik123@gmail.com    | 221307 |   707903310 | Friend           |
+| Puspa     | Rai      | Rampur     | Varanasi   | UP        | puspa123@gmail.com     | 221144 |   898822334 | Family           |
+| Rahul     | Sharma   | Shiv Nagar | Prayagraj  | HP        | rahul123@gmail.com     | 232020 |   947373377 | Office Colleague |
+| Sita      | Devi     | Rampur     | Ayodhya    | UP        | sitadevi123@gmail.com  | 252525 |   917070707 | Family           |
+| Vandana   | Seth     | Jagdishpur | Jagdishpur | MP        | vandana123@gmail.com   | 313030 |   913122332 | Office Colleague |
++-----------+----------+------------+------------+-----------+------------------------+--------+-------------+------------------+
+8 rows in set (0.00 sec)
